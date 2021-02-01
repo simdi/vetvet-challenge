@@ -1,0 +1,4 @@
+.distanceUnitContainer {
+  display: flex;
+  justify-content: space-between;
+}

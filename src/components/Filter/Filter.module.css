@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  border: 1px solid #F2F2F2;
+}
+
+.sortOption {
+  margin-top: 0 !important;
+}
+
+.sort {
+  padding: 10px;
+  display: inline-flex;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sort > div {
+  margin-top: 4px;
+}
+
+.sortOptionContent {
+  padding: .5em;
+}
+

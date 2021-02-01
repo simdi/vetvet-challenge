@@ -1,0 +1,46 @@
+.navbar {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(96, 95, 95, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.navbarLeft {
+  display: flex;
+}
+
+.navbarLeft > div {
+  width: 24px;
+  padding: 10px;
+  background: #000843;
+  border-radius: 0 50px 50px 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.navbarLeft > div > img {
+  height: 15px;
+  margin-top: 5px;
+  width: 20px;
+}
+
+.navbarRight {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.navbarRight > div {
+  line-height: 34px;
+}
+
+.imgContainer {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  background: #F2F2F2;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  margin-right: 10px;
+}

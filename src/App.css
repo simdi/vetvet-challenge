@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+input {
+  padding: 10px 20px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 50px 0 0 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input:focus {
+  outline: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="range"] {
+  color: #000843;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+label {
+  display: table;
+  margin: .8em 0;
+  cursor: pointer;
+}
+
+label > input {
+  margin-right: 8px;
+}
+
+label > small {
+  display: block;
+  font-size: 12px;
+  color: #4F4F4F;
+  padding-left: 25px;
+}
+
+.text-darkBlue {
+  color: #000843;
+}
+
+.text-lightGray {
+  color: #4F4F4F;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 1.3em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #000843;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #000843;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.btn {
+  padding: .8em 1em;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: #000843;
+  color: #FFFFFF;
+}
+
+.btn-transparent {
+  background: transparent;
+  color: #2D9CDB;
+}
+
+
+.pt-1 {
+  padding-top: 1em;
+}
+
+
+.pillContainer {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.pillContainer > .active {
+  background: #000843;
+  color: #FFFFFF;
+}
+
+.pill, .sortContainer {
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 65px;
+  padding: 13px 18px;
+  margin-right: 10px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  color: #000843;
+}
+
+.pillOption, .sortOption {
+  position: absolute;
+  width: 300px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(96, 95, 95, 0.08);
+  border-radius: 5px;
+  border: 1px solid #F2F2F2;
+  margin-top: 3em;
+}
+
+.pillOptionContent {
+  padding: 1em 1em;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pillOptionFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  border-top: 1px solid #F2F2F2;
 }
