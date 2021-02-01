@@ -133,6 +133,12 @@ input:checked + .slider:before {
   flex-direction: column;
 }
 
+@media(max-width: 992px) {
+  .pillContainer {
+    margin-top: .5em;
+  }
+}
+
 .pillContainer > .active {
   background: #000843;
   color: #FFFFFF;

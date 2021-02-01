@@ -44,3 +44,13 @@
   box-sizing: border-box;
   margin-right: 10px;
 }
+
+.userNameText {
+  display: none;
+}
+
+@media(min-width: 992px) {
+  .userNameText {
+    display: block;
+  }
+}

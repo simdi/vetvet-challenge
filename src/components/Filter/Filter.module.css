@@ -1,8 +1,19 @@
 .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   padding: 20px;
   border: 1px solid #F2F2F2;
+}
+
+@media(min-width: 992px) {
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding: 20px;
+    border: 1px solid #F2F2F2;
+  }
 }
 
 .sortOption {

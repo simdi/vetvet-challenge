@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className={style.imgContainer}>
           { hasImage && <img src="../../assets/images/user.svg" alt="User profile" /> }
         </div>
-        <div>Username</div>
+        <div className={style.userNameText}>Username</div>
       </div>
     </header>
   )

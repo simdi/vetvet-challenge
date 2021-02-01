@@ -5,7 +5,8 @@ const practicesSlice = createSlice({
   name: 'practices',
   initialState: {
     isLoading: false,
-    data: null,
+    data: [],
+    meta: null,
     error: null
   },
   reducers: {
@@ -18,9 +19,11 @@ const practicesSlice = createSlice({
       state.error = payload;
     },
     getPracticesSuccess(state, { payload }) {
+      const { practices, meta } = payload;
       state.isLoading = false;
       state.error = null;
-      state.data = payload;
+      state.meta = meta;
+      state.data = practices;
     }
   }
 });
@@ -35,6 +38,7 @@ export const getPracticesStart = () => async (dispatch) => {
   try {
     dispatch(getPractices());
     const { data } = await ApiService.getPractices();
+    console.log({ data });
     dispatch(getPracticesSuccess(data));
   } catch (e) {
     dispatch(getPracticesError(e.message));
